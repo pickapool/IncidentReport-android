@@ -1,0 +1,64 @@
+<resources>
+    <string name="app_name">Laua-an Disaster and Incident Report</string>
+    <string-array name="typeIncidents">
+        <item>Accident</item>
+        <item>Fire</item>
+        <item>Flood</item>
+        <item>Landslide</item>
+        <item>Storm Surge</item>
+        <item>Others</item>
+    </string-array>
+    <string name="navigation_drawer_open">Open Navigation Drawer</string>
+    <string name="navigation_drawer_close">Close Navigation Drawer</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="status">
+        <item>Responded</item>
+        <item>Failed</item>
+        <item>Pending</item>
+</string-array>
+    <string-array name="respondedBy">
+        <item>LaDAVU</item>
+        <item>MDRRMC</item>
+        <item>BFP</item>
+        <item>Others</item>
+    </string-array>
+    <string-array name="userStatus">
+        <item>Approve</item>
+        <item>Deny</item>
+    </string-array>
+    <string-array name="months">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+    <string-array name="year">
+        <item>2022</item>
+        <item>2023</item>
+        <item>2024</item>
+        <item>2025</item>
+        <item>2026</item>
+        <item>2027</item>
+        <item>2028</item>
+        <item>2029</item>
+        <item>2030</item>
+        <item>2031</item>
+        <item>2032</item>
+        <item>2033</item>
+        <item>2034</item>
+        <item>2035</item>
+        <item>2036</item>
+        <item>2037</item>
+        <item>2038</item>
+        <item>2039</item>
+    </string-array>
+</resources>

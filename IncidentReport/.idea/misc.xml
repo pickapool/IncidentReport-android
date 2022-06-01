@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Cyrille Con Morales/AndroidStudioProjects/IncidentReport/app/src/main/res/drawable/black_border.xml" value="0.27395833333333336" />
+        <entry key="..\:/Users/Cyrille Con Morales/AndroidStudioProjects/IncidentReport/app/src/main/res/drawable/ic_dashboard.xml" value="0.20833333333333334" />
+        <entry key="..\:/Users/Cyrille Con Morales/AndroidStudioProjects/IncidentReport/app/src/main/res/drawable/ic_incidents.xml" value="0.20833333333333334" />
+        <entry key="..\:/Users/Cyrille Con Morales/AndroidStudioProjects/IncidentReport/app/src/main/res/drawable/ic_logout.xml" value="0.20833333333333334" />
+        <entry key="..\:/Users/Cyrille Con Morales/AndroidStudioProjects/IncidentReport/app/src/main/res/drawable/ic_people.xml" value="0.20833333333333334" />
+        <entry key="..\:/Users/Cyrille Con Morales/AndroidStudioProjects/IncidentReport/app/src/main/res/drawable/status_failed.xml" value="0.20833333333333334" />
+        <entry key="..\:/Users/Cyrille Con Morales/AndroidStudioProjects/IncidentReport/app/src/main/res/drawable/status_pending.xml" value="0.25" />
+        <entry key="..\:/Users/Cyrille Con Morales/AndroidStudioProjects/IncidentReport/app/src/main/res/drawable/status_responded.xml" value="0.20833333333333334" />
+        <entry key="..\:/Users/Cyrille Con Morales/AndroidStudioProjects/IncidentReport/app/src/main/res/drawable/table_border.xml" value="0.2890625" />
+        <entry key="..\:/Users/Cyrille Con Morales/AndroidStudioProjects/IncidentReport/app/src/main/res/layout/Login_Activity.xml" value="0.19114583333333332" />
+        <entry key="..\:/Users/Cyrille Con Morales/AndroidStudioProjects/IncidentReport/app/src/main/res/layout/activity_admin.xml" value="0.11055276381909548" />
+        <entry key="..\:/Users/Cyrille Con Morales/AndroidStudioProjects/IncidentReport/app/src/main/res/layout/activity_google_map.xml" value="0.16197916666666667" />
+        <entry key="..\:/Users/Cyrille Con Morales/AndroidStudioProjects/IncidentReport/app/src/main/res/layout/admin_incidents_reported.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/Cyrille Con Morales/AndroidStudioProjects/IncidentReport/app/src/main/res/layout/admin_incidents_reported_layout.xml" value="0.22" />
+        <entry key="..\:/Users/Cyrille Con Morales/AndroidStudioProjects/IncidentReport/app/src/main/res/layout/change_email_dialog.xml" value="0.184375" />
+        <entry key="..\:/Users/Cyrille Con Morales/AndroidStudioProjects/IncidentReport/app/src/main/res/layout/change_password_dialog.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/Cyrille Con Morales/AndroidStudioProjects/IncidentReport/app/src/main/res/layout/change_status_dialog.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/Cyrille Con Morales/AndroidStudioProjects/IncidentReport/app/src/main/res/layout/change_user_status.xml" value="0.1638888888888889" />
+        <entry key="..\:/Users/Cyrille Con Morales/AndroidStudioProjects/IncidentReport/app/src/main/res/layout/content_admin_home.xml" value="0.25885416666666666" />
+        <entry key="..\:/Users/Cyrille Con Morales/AndroidStudioProjects/IncidentReport/app/src/main/res/layout/filter_summary.xml" value="0.2671875" />
+        <entry key="..\:/Users/Cyrille Con Morales/AndroidStudioProjects/IncidentReport/app/src/main/res/layout/fragment_dashboard.xml" value="0.22" />
+        <entry key="..\:/Users/Cyrille Con Morales/AndroidStudioProjects/IncidentReport/app/src/main/res/layout/fragment_incidents.xml" value="0.1921875" />
+        <entry key="..\:/Users/Cyrille Con Morales/AndroidStudioProjects/IncidentReport/app/src/main/res/layout/fragment_news.xml" value="0.1921875" />
+        <entry key="..\:/Users/Cyrille Con Morales/AndroidStudioProjects/IncidentReport/app/src/main/res/layout/fragment_news_and_update.xml" value="0.22" />
+        <entry key="..\:/Users/Cyrille Con Morales/AndroidStudioProjects/IncidentReport/app/src/main/res/layout/fragment_summary.xml" value="0.33" />
+        <entry key="..\:/Users/Cyrille Con Morales/AndroidStudioProjects/IncidentReport/app/src/main/res/layout/fragment_users.xml" value="0.1921875" />
+        <entry key="..\:/Users/Cyrille Con Morales/AndroidStudioProjects/IncidentReport/app/src/main/res/layout/incidents_layouts.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/Cyrille Con Morales/AndroidStudioProjects/IncidentReport/app/src/main/res/layout/login_activity.xml" value="0.2578125" />
+        <entry key="..\:/Users/Cyrille Con Morales/AndroidStudioProjects/IncidentReport/app/src/main/res/layout/nav_header.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/Cyrille Con Morales/AndroidStudioProjects/IncidentReport/app/src/main/res/layout/news_layout.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/Cyrille Con Morales/AndroidStudioProjects/IncidentReport/app/src/main/res/layout/profile_dialog.xml" value="0.2609375" />
+        <entry key="..\:/Users/Cyrille Con Morales/AndroidStudioProjects/IncidentReport/app/src/main/res/layout/signup_activity.xml" value="0.2578125" />
+        <entry key="..\:/Users/Cyrille Con Morales/AndroidStudioProjects/IncidentReport/app/src/main/res/layout/summary_report_layout.xml" value="0.26458333333333334" />
+        <entry key="..\:/Users/Cyrille Con Morales/AndroidStudioProjects/IncidentReport/app/src/main/res/layout/upserpanel_report_activity.xml" value="0.2578125" />
+        <entry key="..\:/Users/Cyrille Con Morales/AndroidStudioProjects/IncidentReport/app/src/main/res/layout/user_aaccount_layout.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/Cyrille Con Morales/AndroidStudioProjects/IncidentReport/app/src/main/res/layout/user_account_layout.xml" value="0.22" />
+        <entry key="..\:/Users/Cyrille Con Morales/AndroidStudioProjects/IncidentReport/app/src/main/res/layout/user_panel_activity.xml" value="0.2578125" />
+        <entry key="..\:/Users/Cyrille Con Morales/AndroidStudioProjects/IncidentReport/app/src/main/res/layout/userpanel_file_activity.xml" value="0.33" />
+        <entry key="..\:/Users/Cyrille Con Morales/AndroidStudioProjects/IncidentReport/app/src/main/res/layout/userpanel_home_activity.xml" value="0.2578125" />
+        <entry key="..\:/Users/Cyrille Con Morales/AndroidStudioProjects/IncidentReport/app/src/main/res/layout/userpanel_homel_activity.xml" value="0.259375" />
+        <entry key="..\:/Users/Cyrille Con Morales/AndroidStudioProjects/IncidentReport/app/src/main/res/layout/userpanel_profile_activity.xml" value="0.2578125" />
+        <entry key="..\:/Users/Cyrille Con Morales/AndroidStudioProjects/IncidentReport/app/src/main/res/layout/userpanel_profile_edit.xml" value="0.2578125" />
+        <entry key="..\:/Users/Cyrille Con Morales/AndroidStudioProjects/IncidentReport/app/src/main/res/menu/activity_main_drawer.xml" value="0.1921875" />
+        <entry key="..\:/Users/Cyrille Con Morales/AndroidStudioProjects/IncidentReport/app/src/main/res/menu/admin__home.xml" value="0.1921875" />
+        <entry key="..\:/Users/Cyrille Con Morales/AndroidStudioProjects/IncidentReport/app/src/main/res/menu/drawer_menu.xml" value="0.33" />
+        <entry key="..\:/Users/FGCI Administrator/Desktop/Systems/android-IncidentReport/IncidentReport/app/src/main/res/layout/change_password_dialog.xml" value="0.1334853090172239" />
+        <entry key="..\:/Users/FGCI Administrator/Desktop/Systems/android-IncidentReport/IncidentReport/app/src/main/res/layout/signup_activity.xml" value="0.2644927536231884" />
+        <entry key="..\:/Users/FGCI Administrator/Downloads/System and APK v1.1/System and APK v1.1/IncidentReport/app/src/main/res/drawable/black_border.xml" value="0.178" />
+        <entry key="..\:/Users/FGCI Administrator/Downloads/System and APK v1.1/System and APK v1.1/IncidentReport/app/src/main/res/drawable/status_responded.xml" value="0.1765" />
+        <entry key="..\:/Users/FGCI Administrator/Downloads/System and APK v1.1/System and APK v1.1/IncidentReport/app/src/main/res/drawable/table_border.xml" value="0.2135" />
+        <entry key="..\:/Users/FGCI Administrator/Downloads/System and APK v1.1/System and APK v1.1/IncidentReport/app/src/main/res/drawable/table_no_border.xml" value="0.178" />
+        <entry key="..\:/Users/FGCI Administrator/Downloads/System and APK v1.1/System and APK v1.1/IncidentReport/app/src/main/res/layout/activity_admin.xml" value="0.16927083333333334" />
+        <entry key="..\:/Users/FGCI Administrator/Downloads/System and APK v1.1/System and APK v1.1/IncidentReport/app/src/main/res/layout/admin_incidents_reported_layout.xml" value="0.2477355072463768" />
+        <entry key="..\:/Users/FGCI Administrator/Downloads/System and APK v1.1/System and APK v1.1/IncidentReport/app/src/main/res/layout/change_email_dialog.xml" value="0.2477355072463768" />
+        <entry key="..\:/Users/FGCI Administrator/Downloads/System and APK v1.1/System and APK v1.1/IncidentReport/app/src/main/res/layout/change_password_dialog.xml" value="0.2477355072463768" />
+        <entry key="..\:/Users/FGCI Administrator/Downloads/System and APK v1.1/System and APK v1.1/IncidentReport/app/src/main/res/layout/change_status_dialog.xml" value="0.2477355072463768" />
+        <entry key="..\:/Users/FGCI Administrator/Downloads/System and APK v1.1/System and APK v1.1/IncidentReport/app/src/main/res/layout/change_user_status.xml" value="0.2477355072463768" />
+        <entry key="..\:/Users/FGCI Administrator/Downloads/System and APK v1.1/System and APK v1.1/IncidentReport/app/src/main/res/layout/filter_summary.xml" value="0.2477355072463768" />
+        <entry key="..\:/Users/FGCI Administrator/Downloads/System and APK v1.1/System and APK v1.1/IncidentReport/app/src/main/res/layout/fragment_dashboard.xml" value="0.2477355072463768" />
+        <entry key="..\:/Users/FGCI Administrator/Downloads/System and APK v1.1/System and APK v1.1/IncidentReport/app/src/main/res/layout/fragment_incidents.xml" value="0.2477355072463768" />
+        <entry key="..\:/Users/FGCI Administrator/Downloads/System and APK v1.1/System and APK v1.1/IncidentReport/app/src/main/res/layout/fragment_news_and_update.xml" value="0.2477355072463768" />
+        <entry key="..\:/Users/FGCI Administrator/Downloads/System and APK v1.1/System and APK v1.1/IncidentReport/app/src/main/res/layout/fragment_summary.xml" value="0.2477355072463768" />
+        <entry key="..\:/Users/FGCI Administrator/Downloads/System and APK v1.1/System and APK v1.1/IncidentReport/app/src/main/res/layout/fragment_users.xml" value="0.2477355072463768" />
+        <entry key="..\:/Users/FGCI Administrator/Downloads/System and APK v1.1/System and APK v1.1/IncidentReport/app/src/main/res/layout/login_activity.xml" value="0.264" />
+        <entry key="..\:/Users/FGCI Administrator/Downloads/System and APK v1.1/System and APK v1.1/IncidentReport/app/src/main/res/layout/nav_header.xml" value="0.16927083333333334" />
+        <entry key="..\:/Users/FGCI Administrator/Downloads/System and APK v1.1/System and APK v1.1/IncidentReport/app/src/main/res/layout/news_layout.xml" value="0.2477355072463768" />
+        <entry key="..\:/Users/FGCI Administrator/Downloads/System and APK v1.1/System and APK v1.1/IncidentReport/app/src/main/res/layout/signup_activity.xml" value="0.16927083333333334" />
+        <entry key="..\:/Users/FGCI Administrator/Downloads/System and APK v1.1/System and APK v1.1/IncidentReport/app/src/main/res/layout/summary_report_layout.xml" value="0.2477355072463768" />
+        <entry key="..\:/Users/FGCI Administrator/Downloads/System and APK v1.1/System and APK v1.1/IncidentReport/app/src/main/res/layout/upserpanel_report_activity.xml" value="0.16927083333333334" />
+        <entry key="..\:/Users/FGCI Administrator/Downloads/System and APK v1.1/System and APK v1.1/IncidentReport/app/src/main/res/layout/user_account_layout.xml" value="0.2477355072463768" />
+        <entry key="..\:/Users/FGCI Administrator/Downloads/System and APK v1.1/System and APK v1.1/IncidentReport/app/src/main/res/layout/userpanel_file_activity.xml" value="0.16927083333333334" />
+        <entry key="..\:/Users/FGCI Administrator/Downloads/System and APK v1.1/System and APK v1.1/IncidentReport/app/src/main/res/layout/userpanel_home_activity.xml" value="0.2477355072463768" />
+        <entry key="..\:/Users/FGCI Administrator/Downloads/System and APK v1.1/System and APK v1.1/IncidentReport/app/src/main/res/layout/userpanel_profile_activity.xml" value="0.16927083333333334" />
+        <entry key="..\:/Users/FGCI Administrator/Downloads/System and APK v1.1/System and APK v1.1/IncidentReport/app/src/main/res/menu/drawer_menu.xml" value="0.16927083333333334" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

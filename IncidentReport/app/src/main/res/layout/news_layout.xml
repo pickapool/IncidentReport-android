@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#f58142"
+    android:layout_marginBottom="5dp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/table_border"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/deleteNews"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+
+            android:layout_gravity="right"
+            android:src="@mipmap/close_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Title" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginRight="50dp"
+                android:layout_height="wrap_content">
+                    <EditText
+                        android:id="@+id/newsLayoutTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@id/editTitle"
+                        android:background="@drawable/table_border"
+                        android:padding="5dp" />
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:id="@+id/editTitle"
+                        android:layout_height="30dp"
+                        android:layout_alignParentEnd="true"
+                        android:src="@drawable/ic_editnews"
+                        />
+            </RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Body" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginRight="50dp"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/newsLayoutBody"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@drawable/table_border"
+                android:gravity="top|start"
+                android:inputType="textMultiLine"
+                android:layout_toLeftOf="@id/editBody"
+                android:padding="5dp" />
+            <ImageView
+                android:layout_width="30dp"
+                android:id="@+id/editBody"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_editnews"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

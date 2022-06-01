@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:background="@drawable/table_border"
+    android:layout_marginBottom="10dp"
+    >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:padding="5dp"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="DATE"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="date Incident"
+            android:textSize="15dp"
+            android:padding="3dp"
+            android:id="@+id/dateIncident"
+            android:background="@drawable/table_border"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Incident"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="date Incident"
+            android:textSize="15dp"
+            android:id="@+id/incident"
+            android:padding="3dp"
+            android:background="@drawable/table_border"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Address"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="date Incident"
+            android:textSize="15dp"
+            android:padding="3dp"
+            android:id="@+id/addressIncident"
+            android:background="@drawable/table_border"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Contact Person"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="date Incident"
+            android:textSize="15dp"
+            android:padding="3dp"
+            android:id="@+id/contactPersonIncident"
+            android:background="@drawable/table_border"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Contact Number"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="date Incident"
+            android:textSize="15dp"
+            android:padding="3dp"
+            android:id="@+id/contactNumberIncident"
+            android:background="@drawable/table_border"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Proof"
+            />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:id="@+id/proof"
+            android:src="@mipmap/ic_launcher_round"
+            />
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_weight="2"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/statusName"
+            android:text="Status:"
+            android:textAlignment="center"
+            />
+
+        <Button
+            android:id="@+id/statusUpdateButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="3dp"
+            android:layout_below="@id/statusName" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textRespond"
+            android:text="Responded By:"
+            android:layout_below="@id/statusUpdateButton"
+            android:textAlignment="center"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/respondedBy"
+            android:text=""
+            android:textStyle="bold"
+            android:singleLine="false"
+            android:layout_below="@id/textRespond"
+            android:textAlignment="center"
+            />
+    </RelativeLayout>
+</LinearLayout>
+</RelativeLayout>

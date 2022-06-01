@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view"
+    >
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/dashboard"
+            android:icon="@drawable/ic_dashboard"
+            android:title="Dashboard" />
+        <item
+            android:id="@+id/listOfUsers"
+            android:icon="@drawable/ic_people"
+            android:title="Users" />
+        <item
+            android:id="@+id/reportedIncidents"
+            android:icon="@drawable/ic_incidents"
+            android:title="Reported Incidents" />
+        <item
+            android:id="@+id/summary"
+            android:icon="@drawable/ic_summary"
+            android:title="Summary of Report" />
+        <item
+            android:id="@+id/newsUpdate"
+            android:icon="@drawable/ic_news"
+            android:title="News and Update" />
+    </group>
+    <item android:title="Settings">
+        <menu>
+            <item
+                android:id="@+id/logOutAdmin"
+                android:icon="@drawable/ic_logout"
+                android:title="Logout"></item>
+        </menu>
+    </item>
+</menu>

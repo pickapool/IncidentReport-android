@@ -1,0 +1,106 @@
+{
+  "project_info": {
+    "project_number": "402996223687",
+    "firebase_url": "https://icredit-f0f7f.firebaseio.com",
+    "project_id": "icredit-f0f7f",
+    "storage_bucket": "icredit-f0f7f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:402996223687:android:12ff2020473339cd0b28e2",
+        "android_client_info": {
+          "package_name": "com.example.incidentreport"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "402996223687-vcasr5v92k1ekgs7f3ggg60ahjqktf77.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvSEu9hpddd8eIs_dydyLO-ozCNAwrdG0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "402996223687-vcasr5v92k1ekgs7f3ggg60ahjqktf77.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:402996223687:android:29e37eb966d9b583",
+        "android_client_info": {
+          "package_name": "com.example.lloyd.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "402996223687-vcasr5v92k1ekgs7f3ggg60ahjqktf77.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvSEu9hpddd8eIs_dydyLO-ozCNAwrdG0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "402996223687-vcasr5v92k1ekgs7f3ggg60ahjqktf77.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:402996223687:android:e85e1fabee6383f4",
+        "android_client_info": {
+          "package_name": "com.example.lloyd.newapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "402996223687-7179h1imijtsct5h9v7eordmgg9k79se.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.lloyd.newapp",
+            "certificate_hash": "1426ce46e57b1a4161bc187f5167af2f91621e4e"
+          }
+        },
+        {
+          "client_id": "402996223687-vcasr5v92k1ekgs7f3ggg60ahjqktf77.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvSEu9hpddd8eIs_dydyLO-ozCNAwrdG0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "402996223687-vcasr5v92k1ekgs7f3ggg60ahjqktf77.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
