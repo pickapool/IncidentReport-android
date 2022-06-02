@@ -40,7 +40,7 @@
                         android:id="@+id/accidentNumber"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Accidents:" />
+                        android:text="Vehicular Accidents:" />
 
                     <TextView
                         android:id="@+id/fireNumber"

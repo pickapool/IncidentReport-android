@@ -85,7 +85,7 @@ public class NewsAndUpdateAdapter extends RecyclerView.Adapter<NewsAndUpdateAdap
     }
 
     void saveNews(String uid,String title,String body){
-        reference.child("NewsAndUpdate").child(uid).setValue(new mNews(uid,title,body)).addOnCompleteListener(task -> {
+        reference.child("NewsAndUpdate").child(uid).setValue(new mNews(uid,title,body,"")).addOnCompleteListener(task -> {
             if(task.isSuccessful()){
                 Toast.makeText(context,"Content has been updated.",Toast.LENGTH_LONG).show();
             }

@@ -3,9 +3,11 @@ package com.example.incidentreport.UserActivities;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -21,7 +23,10 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MapStyleOptions;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -36,20 +41,35 @@ import java.util.ArrayList;
 
 public class UserPanel_Home extends AppCompatActivity implements OnMapReadyCallback {
 
-ImageView buttonReport,buttonFile,buttonProfile;
-LinearLayout showManage;
-boolean isDialogOpen = false;
-TextView editProfileButton,logOut,fullname,email,newsTitle,newsBody;
-DatabaseReference reference;
-GoogleMap googleMaps;
+    ImageView buttonReport,buttonFile,buttonProfile;
+    LinearLayout showManage;
+    boolean isDialogOpen = false;
+    TextView editProfileButton,logOut,fullname,email,newsTitle,newsBody;
+    DatabaseReference reference;
+    GoogleMap googleMaps;
     ArrayList<LatLng> markers = new ArrayList<>();
+    ArrayList<LatLng> proneList = new ArrayList<>();
     ArrayList<String> title = new ArrayList<>();
     ArrayList<String> address = new ArrayList<>();
-
     Handler handler = new Handler();
     Runnable runnable;
     int delay = 15 * 1000;
     ProgressBar progressBar;
+    String imageURL ="";
+
+    String[] Barangays = {"BagongBayan","Lindero","Lupaan","Magyapo","Necesito","Maria","Mauno","MayBunga","Liberato","Lugta","Liya"};
+    String[] proneTypes = {"Landslide, Flooding",
+            "Landslide, Flooding, Scouring, Erosion",
+            "Landslide, Flooding, Scouring, Erosion",
+            "Landslide,Flooding",
+            "Landslide, Flooding, Scouring, Erosion",
+            "Flooding, Scouring, Erosion",
+            "Landslide, Flooding, Scouring, Erosion, Storm Surges",
+            "Landslide, Flooding, Scouring, Erosion, Gullies and Creeks",
+            "Landslide, Flooding, Scouring, Erosion, Critical Area",
+            "Landslide, Flooding, Scouring, Erosion",
+            "Landslide, Flooding, Scouring, Erosion"};
+    @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,7 +78,6 @@ GoogleMap googleMaps;
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
         .findFragmentById(R.id.incidentsMarker);
         mapFragment.getMapAsync(this);
-
 
         fullname = findViewById(R.id.userFName);
         email = findViewById(R.id.userEmail);
@@ -74,6 +93,17 @@ GoogleMap googleMaps;
         editProfileButton = findViewById(R.id.editProfileButton);
         logOut = findViewById(R.id.logOut);
 
+        proneList.add(new LatLng(11.094298,122.046207));
+        proneList.add(new LatLng(11.111467,122.048337));
+        proneList.add(new LatLng(11.136308,122.073319));
+        proneList.add(new LatLng(11.169103,122.059487));
+        proneList.add(new LatLng(11.125585,122.071432));
+        proneList.add(new LatLng(11.097907,122.088018));
+        proneList.add(new LatLng(11.167401,122.038371));
+        proneList.add(new LatLng(11.113780,122.137979));
+        proneList.add(new LatLng(11.109037,122.071889));
+        proneList.add(new LatLng(11.082552,122.051667));
+        proneList.add(new LatLng(11.122010,122.052212));
 
         reference = FirebaseDatabase.getInstance().getReference();
 
@@ -107,6 +137,20 @@ GoogleMap googleMaps;
                
                 isDialogOpen = true;
             }
+        });
+
+        newsTitle.setOnTouchListener((v, event) -> {
+            if(event.getAction() == MotionEvent.ACTION_UP) {
+                if(event.getRawX() >= newsTitle.getRight() - newsTitle.getTotalPaddingRight()) {
+                    Intent ii = new Intent(UserPanel_Home.this, UserPanel_NewsActivity.class);
+                    ii.putExtra("title",newsTitle.getText().toString());
+                    ii.putExtra("body",newsBody.getText().toString());
+                    ii.putExtra("imageURL",imageURL);
+                    startActivity(ii);
+                    return true;
+                }
+            }
+            return true;
         });
         Account();
         LoadDataMap();
@@ -174,7 +218,6 @@ GoogleMap googleMaps;
                         Float fLat = Float.parseFloat(latitude);
                         Float fLong = Float.parseFloat(longitude);
 
-
                         LatLng marks = new LatLng(fLat,fLong);
                         markers.add(marks);
                         title.add(incident);
@@ -203,9 +246,18 @@ GoogleMap googleMaps;
             LatLng move = new LatLng(11.156106,122.054483);
 
             googleMaps.clear();
+            googleMaps.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
             if(googleMaps !=null)
                 {
                     progressBar.setVisibility(View.GONE);
+                    for(int j=0;j<proneList.size();j++)
+                    {
+                        googleMaps.addMarker(new MarkerOptions()
+                                .position(proneList.get(j))
+                                .title(Barangays[j]+"-"+proneTypes[j])
+                                .icon(BitmapDescriptorFactory
+                                .defaultMarker(BitmapDescriptorFactory.HUE_BLUE )));
+                    }
                     for (int i = 0; i < markers.size();i++)
                     {
                         googleMaps.addMarker(new MarkerOptions().position(markers.get(i)).title(title.get(i)+" - "+address.get(i)));
@@ -233,6 +285,7 @@ GoogleMap googleMaps;
                     mNews news = snapshot.getValue(mNews.class);
                     newsTitle.setText(news.getTitle());
                     newsBody.setText(news.getBody());
+                    imageURL = news.getImage();
                 }
             }
 

@@ -20,11 +20,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/panel"
-        android:padding="5dp"
-        android:text="Laua-an Disaster and Incident Report System"
+        android:padding="2dp"
+        android:text="LAUA-AN DISASTER MANAGEMENT AND INCIDENT REPORT SYSTEM"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="30dp"
+        android:textSize="24dp"
         android:textStyle="bold" />
     <RelativeLayout
         android:layout_width="match_parent"

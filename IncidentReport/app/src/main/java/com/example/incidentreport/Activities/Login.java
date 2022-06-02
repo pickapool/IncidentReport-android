@@ -65,7 +65,6 @@ public class Login extends AppCompatActivity {
                 password.setTransformationMethod(new PasswordTransformationMethod());
             }
         });
-
         signIn.setOnClickListener(v -> {
             String _email = email.getText().toString();
             String _password = password.getText().toString();
@@ -164,7 +163,7 @@ public class Login extends AppCompatActivity {
         }
     }
     private void GoToPanel() {
-            if (mAuth.getCurrentUser().getEmail().equals("jezillb@gmail.com")) {
+            if (mAuth.getCurrentUser().getEmail().equals("evs66149@gmail.com")) {
                 if (isVerified(FirebaseAuth.getInstance().getCurrentUser())) {
                     Intent ii = new Intent(Login.this, Admin.class);
                     startActivity(ii);

@@ -14,13 +14,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.IncidentReport">
         <activity
+            android:name=".UserActivities.UserPanel_NewsActivity"
+            android:exported="false" />
+        <activity
             android:name=".AdminActivities.Admin"
             android:exported="false"
-            android:theme="@style/Theme.AppCompat.NoActionBar"
-            />
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/map_key" />
+
         <activity
             android:name=".UserActivities.UserPanel_Profile"
             android:exported="false"

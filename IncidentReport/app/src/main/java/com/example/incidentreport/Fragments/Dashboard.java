@@ -71,7 +71,7 @@ public class Dashboard extends Fragment {
         barChart = view.findViewById(R.id.barchart);
         pieChart = view.findViewById(R.id.pieChart);
         reference = FirebaseDatabase.getInstance().getReference();
-        labels.add("Accident");
+        labels.add("Vehicular Accident");
         labels.add("Flood");
         labels.add("Landslide");
         labels.add("Storm Surge");
@@ -96,7 +96,7 @@ public class Dashboard extends Fragment {
                 nAccident = 0;nFlood = 0; nLandSlide = 0;nStorm  = 0;nOthers = 0;nFire= 0;
                 for(DataSnapshot snapshot:dataSnapshot.getChildren()){
                     mReport reports = snapshot.getValue(mReport.class);
-                    if(reports.getIncident().equals("Accident")){
+                    if(reports.getIncident().equals("Vehicular Accident")){
                         nAccident++;
                     }else if(reports.getIncident().equals("Fire")){
                        nFire++;
@@ -125,7 +125,7 @@ public class Dashboard extends Fragment {
                 barChart.animateXY(1000,2000);
                 barDataSet.setColors(ColorTemplate.COLORFUL_COLORS);
                 barDataSet.setValueTextColor(Color.BLACK);
-                acc.setText("Accidents: "+nAccident);
+                acc.setText("Vehicular Accidents: "+nAccident);
                 flod.setText("Floods: "+nFlood);
                 fire.setText("Fire Incidents: "+nFire);
                 land.setText("Landslides: "+nLandSlide);

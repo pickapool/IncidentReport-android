@@ -65,7 +65,7 @@ public class NewsAndUpdate extends Fragment {
 
     void SaveNews(String titles,String bodys){
         String key = database.push().getKey();
-        database.child("NewsAndUpdate").child(key).setValue(new mNews(key,titles,bodys)).addOnCompleteListener(new OnCompleteListener<Void>() {
+        database.child("NewsAndUpdate").child(key).setValue(new mNews(key,titles,bodys,"")).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if(task.isSuccessful()){
@@ -85,7 +85,7 @@ public class NewsAndUpdate extends Fragment {
                 mNewsList.clear();
                 for(DataSnapshot snapshot:dataSnapshot.getChildren()){
                     mNews newss = snapshot.getValue(mNews.class);
-                    mNewsList.add(new mNews(newss.getUid(),newss.getTitle(), newss.getBody()));
+                    mNewsList.add(new mNews(newss.getUid(),newss.getTitle(), newss.getBody(),newss.getImage()));
                 }
                 recyclerView.setHasFixedSize(true);
                 recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));

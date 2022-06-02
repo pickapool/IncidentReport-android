@@ -4,13 +4,15 @@ public class mNews {
     public String uid;
     public String title;
     public String body;
-
+    public String image;
 
     public  mNews(){}
-    public mNews(String uid, String title, String body) {
+
+    public mNews(String uid, String title, String body, String image) {
         this.uid = uid;
         this.title = title;
         this.body = body;
+        this.image = image;
     }
 
     public String getUid() {
@@ -35,5 +37,13 @@ public class mNews {
 
     public void setBody(String body) {
         this.body = body;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 }

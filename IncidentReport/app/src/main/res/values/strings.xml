@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Laua-an Disaster and Incident Report</string>
     <string-array name="typeIncidents">
-        <item>Accident</item>
+        <item>Vehicular Accident</item>
         <item>Fire</item>
         <item>Flood</item>
         <item>Landslide</item>
@@ -16,7 +16,7 @@
         <item>Responded</item>
         <item>Failed</item>
         <item>Pending</item>
-</string-array>
+    </string-array>
     <string-array name="respondedBy">
         <item>LaDAVU</item>
         <item>MDRRMC</item>
