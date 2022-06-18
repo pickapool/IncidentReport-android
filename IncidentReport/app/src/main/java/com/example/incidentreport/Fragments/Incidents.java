@@ -75,7 +75,7 @@ public class Incidents extends Fragment {
             getIncidents("Pending");
         });
         failed.setOnClickListener(v -> {
-            getIncidents("Failed");
+            getIncidents("Forwarded");
         });
         refresh.setOnClickListener(v -> {
             getIncidents("none");
@@ -99,7 +99,7 @@ public class Incidents extends Fragment {
                                 report.getIncident(),report.getLatitude(),report.getLongitude(),
                                 report.getAddress(),report.getContactPerson(),report.getContactNumber(),
                                 report.getReportPath(),report.getStatus(),report.getRespondedBy()));
-                        if(report.getStatus().equals("Failed")){
+                        if(report.getStatus().equals("Forwarded")){
                             fail++;
                         }else if(report.getStatus().equals("Pending")){
                             pen++;
@@ -116,7 +116,7 @@ public class Incidents extends Fragment {
                     recyclerView.setAdapter(adapter);
                     responded.setText("RESPONDED - " + rep);
                     pending.setText("PENDING - " + pen);
-                    failed.setText("FAILED - " + fail);
+                    failed.setText("Forwarded - " + fail);
                 }
                 @Override
                 public void onCancelled(@NonNull DatabaseError databaseError) {
@@ -131,14 +131,13 @@ public class Incidents extends Fragment {
                     rep = 0;
                     fail = 0;
                     pen = 0;
-
                     for (DataSnapshot snapshot:dataSnapshot.getChildren()){
                         mReport report = snapshot.getValue(mReport.class);
                         mReportList.add(new mReport(report.getDate(),report.getUid(),report.getUserUid(),
                                 report.getIncident(),report.getLatitude(),report.getLongitude(),
                                 report.getAddress(),report.getContactPerson(),report.getContactNumber(),
                                 report.getReportPath(),report.getStatus(),report.getRespondedBy()));
-                        if(report.getStatus().equals("Failed")){
+                        if(report.getStatus().equals("Forwarded")){
                             fail++;
                         }else if(report.getStatus().equals("Pending")){
                             pen++;
@@ -152,7 +151,7 @@ public class Incidents extends Fragment {
                     recyclerView.setAdapter(adapter);
                     responded.setText("RESPONDED - " + rep);
                     pending.setText("PENDING - " + pen);
-                    failed.setText("FAILED - " + fail);
+                    failed.setText("Forwarded - " + fail);
                 }
                 @Override
                 public void onCancelled(@NonNull DatabaseError databaseError) {

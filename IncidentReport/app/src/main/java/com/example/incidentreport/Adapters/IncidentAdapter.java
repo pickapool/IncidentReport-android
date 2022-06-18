@@ -64,7 +64,7 @@ public class IncidentAdapter extends RecyclerView.Adapter<IncidentAdapter.ViewHo
             if (status.equals("Pending")) {
                 holder.status.setText(reports.getStatus());
                 holder.status.setBackgroundResource(R.drawable.status_pending);
-            } else if (status.equals("Failed")) {
+            } else if (status.equals("Forwarded")) {
                 holder.status.setText(reports.getStatus());
                 holder.status.setBackgroundResource(R.drawable.status_failed);
             } else {

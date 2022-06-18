@@ -10,7 +10,7 @@
     tools:context=".UserActivities.UserPanel_NewsActivity">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:background="@drawable/black_border"
         android:orientation="vertical"
         android:padding="20dp">
@@ -20,37 +20,9 @@
             android:layout_height="40dp"
             android:src="@drawable/ic_baseline_arrow_back_24"
             />
-        <TextView
+        <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/newsTitle"
-            android:textColor="@color/white"
-            android:text="TITLE"
-            android:layout_marginBottom="10dp"
-            android:textAlignment="center"
-            android:textSize="24dp"
-            />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/newsBody"
-            android:text="Body"
-            android:textSize="18dp"
-            android:textColor="@color/white"
-            android:layout_marginBottom="10dp"
-            />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="3dp"
-            android:background="@color/black"
-            android:layout_marginBottom="10dp"
-            android:padding="20dp" />
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="500px"
-            android:id="@+id/newsImage"
-            />
+            android:layout_height="match_parent"
+            android:id="@+id/adapterNews"/>
     </LinearLayout>
 </LinearLayout>

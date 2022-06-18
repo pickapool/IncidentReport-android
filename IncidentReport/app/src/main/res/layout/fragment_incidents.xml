@@ -36,7 +36,7 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Failed"
+                android:text="Forwarded"
                 android:id="@+id/filterFailed"
                 android:background="@drawable/status_failed"
                 android:layout_margin="10dp"

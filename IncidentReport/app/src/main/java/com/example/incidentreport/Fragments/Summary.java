@@ -77,7 +77,7 @@ public class Summary extends Fragment {
                     mReportList.add(new mReport(reports.getDate(),reports.getIncident(),reports.getAddress(),
                             reports.getContactPerson(),reports.getContactNumber(),reports.getStatus(),reports.getRespondedBy()));
                 }
-                mReportList.add(new mReport("Date","Incidents","Address","Contact Person","Contact Number","Status","Responded By"));
+                mReportList.add(new mReport("Date","Incidents","Address","Remarks","Contact Number","Status","Responded By"));
                 LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
                 linearLayoutManager.setReverseLayout(true);
                 linearLayoutManager.setStackFromEnd(true);
@@ -218,7 +218,7 @@ public class Summary extends Fragment {
                                 reports.getContactPerson(), reports.getContactNumber(), reports.getStatus(), reports.getRespondedBy()));
                     }
                 }
-                mReportList.add(new mReport("Date","Incidents","Address","Contact Person","Contact Number","Status","Responded By"));
+                mReportList.add(new mReport("Date","Incidents","Address","Remarks","Contact Number","Status","Responded By"));
                 LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
                 linearLayoutManager.setReverseLayout(true);
                 linearLayoutManager.setStackFromEnd(true);
@@ -249,7 +249,7 @@ public class Summary extends Fragment {
                                 reports.getContactPerson(), reports.getContactNumber(), reports.getStatus(), reports.getRespondedBy()));
                     }
                 }
-                mReportList.add(new mReport("Date","Incidents","Address","Contact Person","Contact Number","Status","Responded By"));
+                mReportList.add(new mReport("Date","Incidents","Address","Remarks","Contact Number","Status","Responded By"));
                 LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
                 linearLayoutManager.setReverseLayout(true);
                 linearLayoutManager.setStackFromEnd(true);
@@ -275,12 +275,13 @@ public class Summary extends Fragment {
                     mReport reports = snapshot.getValue(mReport.class);
                     String reportMonth = reports.getDate().substring(0,2);
                     String reportYear = reports.getDate().substring(6,10);
+              //      Toast.makeText(Summary.this,reportMonth+"-"+reportYear,Toast.LENGTH_LONG).show();
                     if(reportYear.equals(year) && reportMonth.equals(dateTextToNumber(month)) && reports.getIncident().equals(incident)) {
                         mReportList.add(new mReport(reports.getDate(), reports.getIncident(), reports.getAddress(),
                                 reports.getContactPerson(), reports.getContactNumber(), reports.getStatus(),reports.getRespondedBy()));
                     }
                 }
-                mReportList.add(new mReport("Date","Incidents","Address","Contact Person","Contact Number","Status","Responded By"));
+                mReportList.add(new mReport("Date","Incidents","Address","Remarks","Contact Number","Status","Responded By"));
                 LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
                 linearLayoutManager.setReverseLayout(true);
                 linearLayoutManager.setStackFromEnd(true);
@@ -311,7 +312,7 @@ public class Summary extends Fragment {
                                 reports.getContactPerson(), reports.getContactNumber(), reports.getStatus(),reports.getRespondedBy()));
                     }
                 }
-                mReportList.add(new mReport("Date","Incidents","Address","Contact Person","Contact Number","Status","Responded By"));
+                mReportList.add(new mReport("Date","Incidents","Address","Remarks","Contact Number","Status","Responded By"));
                 LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
                 linearLayoutManager.setReverseLayout(true);
                 linearLayoutManager.setStackFromEnd(true);
@@ -340,7 +341,7 @@ public class Summary extends Fragment {
                                 reports.getContactPerson(),reports.getContactNumber(),reports.getStatus(),reports.getRespondedBy()));
                     }
                 }
-                mReportList.add(new mReport("Date","Incidents","Address","Contact Person","Contact Number","Status","Responded By"));
+                mReportList.add(new mReport("Date","Incidents","Address","Remarks","Contact Number","Status","Responded By"));
                 LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
                 linearLayoutManager.setReverseLayout(true);
                 linearLayoutManager.setStackFromEnd(true);
@@ -366,7 +367,7 @@ public class Summary extends Fragment {
                         mReportList.add(new mReport(reports.getDate(), reports.getIncident(), reports.getAddress(),
                                 reports.getContactPerson(), reports.getContactNumber(), reports.getStatus(),reports.getRespondedBy()));
                 }
-                mReportList.add(new mReport("Date","Incidents","Address","Contact Person","Contact Number","Status","Responded By"));
+                mReportList.add(new mReport("Date","Incidents","Address","Remarks","Contact Number","Status","Responded By"));
                 LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
                 linearLayoutManager.setReverseLayout(true);
                 linearLayoutManager.setStackFromEnd(true);
@@ -393,7 +394,7 @@ public class Summary extends Fragment {
                     mReportList.add(new mReport(reports.getDate(),reports.getIncident(),reports.getAddress(),
                             reports.getContactPerson(),reports.getContactNumber(),reports.getStatus(),reports.getRespondedBy()));
                 }
-                mReportList.add(new mReport("Date","Incidents","Address","Contact Person","Contact Number","Status","Responded By"
+                mReportList.add(new mReport("Date","Incidents","Address","Remarks","Contact Number","Status","Responded By"
                 ));
                 LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
                 linearLayoutManager.setReverseLayout(true);

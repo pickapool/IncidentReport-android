@@ -48,14 +48,20 @@
         <entry key="..\:/Users/Cyrille Con Morales/AndroidStudioProjects/IncidentReport/app/src/main/res/menu/activity_main_drawer.xml" value="0.1921875" />
         <entry key="..\:/Users/Cyrille Con Morales/AndroidStudioProjects/IncidentReport/app/src/main/res/menu/admin__home.xml" value="0.1921875" />
         <entry key="..\:/Users/Cyrille Con Morales/AndroidStudioProjects/IncidentReport/app/src/main/res/menu/drawer_menu.xml" value="0.33" />
+        <entry key="..\:/Users/FGCI Administrator/Desktop/Systems/android-IncidentReport/IncidentReport/app/src/main/res/drawable/black_border.xml" value="0.177" />
         <entry key="..\:/Users/FGCI Administrator/Desktop/Systems/android-IncidentReport/IncidentReport/app/src/main/res/layout/activity_admin.xml" value="0.2644927536231884" />
         <entry key="..\:/Users/FGCI Administrator/Desktop/Systems/android-IncidentReport/IncidentReport/app/src/main/res/layout/activity_user_pael_news.xml" value="0.2644927536231884" />
+        <entry key="..\:/Users/FGCI Administrator/Desktop/Systems/android-IncidentReport/IncidentReport/app/src/main/res/layout/admin_incidents_reported_layout.xml" value="0.2644927536231884" />
         <entry key="..\:/Users/FGCI Administrator/Desktop/Systems/android-IncidentReport/IncidentReport/app/src/main/res/layout/change_email_dialog.xml" value="0.2644927536231884" />
         <entry key="..\:/Users/FGCI Administrator/Desktop/Systems/android-IncidentReport/IncidentReport/app/src/main/res/layout/change_password_dialog.xml" value="0.1334853090172239" />
         <entry key="..\:/Users/FGCI Administrator/Desktop/Systems/android-IncidentReport/IncidentReport/app/src/main/res/layout/change_status_dialog.xml" value="0.2644927536231884" />
         <entry key="..\:/Users/FGCI Administrator/Desktop/Systems/android-IncidentReport/IncidentReport/app/src/main/res/layout/change_user_status.xml" value="0.2644927536231884" />
         <entry key="..\:/Users/FGCI Administrator/Desktop/Systems/android-IncidentReport/IncidentReport/app/src/main/res/layout/filter_summary.xml" value="0.2644927536231884" />
+        <entry key="..\:/Users/FGCI Administrator/Desktop/Systems/android-IncidentReport/IncidentReport/app/src/main/res/layout/fragment_dashboard.xml" value="0.19427083333333334" />
+        <entry key="..\:/Users/FGCI Administrator/Desktop/Systems/android-IncidentReport/IncidentReport/app/src/main/res/layout/fragment_summary.xml" value="0.22239583333333332" />
         <entry key="..\:/Users/FGCI Administrator/Desktop/Systems/android-IncidentReport/IncidentReport/app/src/main/res/layout/fragment_users.xml" value="0.2644927536231884" />
+        <entry key="..\:/Users/FGCI Administrator/Desktop/Systems/android-IncidentReport/IncidentReport/app/src/main/res/layout/layout_marker_details.xml" value="0.2644927536231884" />
+        <entry key="..\:/Users/FGCI Administrator/Desktop/Systems/android-IncidentReport/IncidentReport/app/src/main/res/layout/layout_user_news.xml" value="0.22552083333333334" />
         <entry key="..\:/Users/FGCI Administrator/Desktop/Systems/android-IncidentReport/IncidentReport/app/src/main/res/layout/login_activity.xml" value="0.2644927536231884" />
         <entry key="..\:/Users/FGCI Administrator/Desktop/Systems/android-IncidentReport/IncidentReport/app/src/main/res/layout/signup_activity.xml" value="0.2644927536231884" />
         <entry key="..\:/Users/FGCI Administrator/Desktop/Systems/android-IncidentReport/IncidentReport/app/src/main/res/layout/summary_report_layout.xml" value="0.2644927536231884" />

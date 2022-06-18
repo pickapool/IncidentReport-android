@@ -15,13 +15,17 @@ import com.example.incidentreport.Models.mReport;
 import com.example.incidentreport.R;
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.charts.PieChart;
+import com.github.mikephil.charting.components.Description;
 import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
+import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.data.PieEntry;
 import com.github.mikephil.charting.formatter.IndexAxisValueFormatter;
+import com.github.mikephil.charting.highlight.Highlight;
+import com.github.mikephil.charting.listener.OnChartValueSelectedListener;
 import com.github.mikephil.charting.utils.ColorTemplate;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -29,9 +33,10 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
-public class Dashboard extends Fragment {
+public class Dashboard extends Fragment implements OnChartValueSelectedListener {
 
     BarChart barChart;
     BarDataSet barDataSet;
@@ -42,7 +47,7 @@ public class Dashboard extends Fragment {
     PieData peiData;
     PieDataSet pieDataSet;
     PieChart pieChart;
-
+    TextView chartTitle;
 
     DatabaseReference reference;
     int nAccident,nFire,nFlood,nLandSlide,nStorm,nOthers;
@@ -67,14 +72,15 @@ public class Dashboard extends Fragment {
         land = view.findViewById(R.id.landslideNumber);
         storm = view.findViewById(R.id.stormSurge);
         oth = view.findViewById(R.id.otherNumber);
+        chartTitle = view.findViewById(R.id.chartTitle);
 
         barChart = view.findViewById(R.id.barchart);
         pieChart = view.findViewById(R.id.pieChart);
         reference = FirebaseDatabase.getInstance().getReference();
-        labels.add("Vehicular Accident");
+        labels.add("Vehicular-Accident");
         labels.add("Flood");
         labels.add("Landslide");
-        labels.add("Storm Surge");
+        labels.add("Storm-Surge");
         labels.add("Fire");
         labels.add("Others");
         labelsPie.add("LaDAVU");
@@ -111,16 +117,17 @@ public class Dashboard extends Fragment {
                     }
                 }
                 barList.add(new BarEntry(0f,nAccident));
-                barList.add(new BarEntry(1.2f,nFlood));
-                barList.add(new BarEntry(2.4f,nLandSlide));
-                barList.add(new BarEntry(3.6f,nStorm));
-                barList.add(new BarEntry(4.8f,nFire));
-                barList.add(new BarEntry(6f,nOthers));
+                barList.add(new BarEntry(1f,nFlood));
+                barList.add(new BarEntry(2f,nLandSlide));
+                barList.add(new BarEntry(3f,nStorm));
+                barList.add(new BarEntry(4f,nFire));
+                barList.add(new BarEntry(5f,nOthers));
 
 
                 barDataSet = new BarDataSet(barList,"Number of Incidents");
                 barData = new BarData(barDataSet);
                 barChart.setData(barData);
+                barChart.setFitBars(true);
                 barChart.getXAxis().setValueFormatter(new IndexAxisValueFormatter(labels));
                 barChart.animateXY(1000,2000);
                 barDataSet.setColors(ColorTemplate.COLORFUL_COLORS);
@@ -162,11 +169,12 @@ public class Dashboard extends Fragment {
                         others++;
                     }
                 }
-                float val1 = (float)(ladavu*10.0);
-                float val2 = (float)(mdrrmc*10.0);
-                float val3 = (float)(bfp*10.0);
-                float val4 = (float)(others*10.0);
-                float val5 = (float)(pending*10.0);
+                float total = ladavu+mdrrmc+bfp+others+pending;
+                float val1 = (float)((ladavu/total)*100);
+                float val2 = (float)((mdrrmc/total)*100);
+                float val3 = (float)((bfp/total)*100);
+                float val4 = (float)((others/total)*100);
+                float val5 = (float)((pending/total)*100);
                 pieList.add(new PieEntry(val1,"LaDAVU"));
                 pieList.add(new PieEntry(val2,"MDRRMC"));
                 pieList.add(new PieEntry(val3,"BFP"));
@@ -178,6 +186,10 @@ public class Dashboard extends Fragment {
                 pieChart.animateXY(1000,2000);
                 pieDataSet.setColors(ColorTemplate.COLORFUL_COLORS);
                 pieDataSet.setValueTextColor(Color.BLACK);
+                pieChart.setDrawSliceText(false);
+                pieChart.getData().setDrawValues(false);
+                pieChart.setOnChartValueSelectedListener(Dashboard.this);
+
             }
 
             @Override
@@ -185,6 +197,18 @@ public class Dashboard extends Fragment {
 
             }
         });
+
+    }
+
+    @Override
+    public void onValueSelected(Entry e, Highlight h) {
+        DecimalFormat df = new DecimalFormat("0.00");
+        PieEntry pe = (PieEntry) e;
+        chartTitle.setText(pe.getLabel()+"-"+df.format(e.getY())+"%");
+    }
+
+    @Override
+    public void onNothingSelected() {
 
     }
 }

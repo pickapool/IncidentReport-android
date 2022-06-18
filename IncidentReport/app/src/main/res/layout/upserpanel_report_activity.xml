@@ -79,14 +79,14 @@
                         <EditText
                             android:id="@+id/currenAddress"
                             android:layout_width="match_parent"
-                            android:layout_height="40dp"
+                            android:layout_height="80dp"
                             android:background="@drawable/table_border"
                             android:padding="5dp" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Contact person" />
+                            android:text="Remarks" />
 
                         <EditText
                             android:id="@+id/contactPerson"
@@ -133,7 +133,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentRight="true"
-                                android:text="Upload" />
+                                android:text="Upload Picture" />
                         </RelativeLayout>
 
                         <Button

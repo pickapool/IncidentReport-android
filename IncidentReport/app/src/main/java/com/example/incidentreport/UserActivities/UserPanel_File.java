@@ -131,7 +131,7 @@ public class UserPanel_File extends AppCompatActivity {
         row.addView(textView("Date"));
         row.addView(textView("Incident"));
         row.addView(textView("Address"));
-        row.addView(textView("Contact Person"));
+        row.addView(textView("Remarks"));
         row.addView(textView("Status"));
         table.addView(row,0);
     }

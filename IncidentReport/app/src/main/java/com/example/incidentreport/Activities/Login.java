@@ -78,20 +78,13 @@ public class Login extends AppCompatActivity {
 
     }
     private void SignIn(String email,String password){
-        ProgressDialog progressDialog
-                = new ProgressDialog(this);
-        progressDialog.setTitle("Logging in...");
-        progressDialog.show();
         mAuth.signInWithEmailAndPassword(email,password)
                 .addOnCompleteListener(task -> {
                     if(task.isSuccessful()){
-                        progressDialog.dismiss();
                         FirebaseUser user = mAuth.getCurrentUser();
                         GoToPanel();
-                        progressDialog.dismiss();
                     }
                 }).addOnFailureListener(e ->{
-                progressDialog.dismiss();
                 Toast.makeText(Login.this,"There was a problem while signing in!",Toast.LENGTH_LONG).show();
         });
     }
@@ -163,24 +156,33 @@ public class Login extends AppCompatActivity {
         }
     }
     private void GoToPanel() {
+        ProgressDialog progressDialog
+                = new ProgressDialog(this);
+        progressDialog.setTitle("Logging in...");
+        progressDialog.show();
             if (mAuth.getCurrentUser().getEmail().equals("evs66149@gmail.com")) {
                 if (isVerified(FirebaseAuth.getInstance().getCurrentUser())) {
                     Intent ii = new Intent(Login.this, Admin.class);
                     startActivity(ii);
+                    finish();
+                    progressDialog.dismiss();
                 } else {
+                    progressDialog.dismiss();
                     Toast.makeText(Login.this, "Your email is not verified, please check your inbox.", Toast.LENGTH_LONG).show();
                 }
-            } else if(email.getText().toString().equals("") && !mAuth.getCurrentUser().equals(null)){
+            } else if(email.getText().toString().equals("") || !mAuth.getCurrentUser().equals(null)){
                 if (isVerified(FirebaseAuth.getInstance().getCurrentUser())) {
-                    approve(FirebaseAuth.getInstance().getCurrentUser().getUid());
+                    approve(FirebaseAuth.getInstance().getCurrentUser().getUid(),progressDialog);
                 } else {
+                    progressDialog.dismiss();
                     Toast.makeText(Login.this, "Your email is not verified, please check your inbox.", Toast.LENGTH_LONG).show();
                 }
             } else {
-
+                progressDialog.dismiss();
+                Toast.makeText(Login.this, "Something went wrong", Toast.LENGTH_LONG).show();
             }
     }
-    void approve(String uid){
+    void approve(String uid,ProgressDialog dialog){
             reference.child("UserAccounts").orderByChild("uid").equalTo(uid)
                     .addValueEventListener(new ValueEventListener() {
                         @Override
@@ -189,9 +191,12 @@ public class Login extends AppCompatActivity {
                                 mUserAccount account = snapshot.getValue(mUserAccount.class);
                                 String approve =  String.valueOf(account.isApprove());
                                 if(approve.equals("true")){
+                                    dialog.dismiss();
                                     Intent ii = new Intent(Login.this, UserPanel_Home.class);
                                     startActivity(ii);
+                                    finish();
                                 }else{
+                                    dialog.dismiss();
                                     Toast.makeText(Login.this, "Your email is still not approve by the admin.",
                                             Toast.LENGTH_LONG).show();
                                 }

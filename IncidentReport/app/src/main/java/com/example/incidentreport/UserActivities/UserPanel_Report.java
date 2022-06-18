@@ -27,6 +27,7 @@ import com.example.incidentreport.Activities.Login;
 import com.example.incidentreport.Models.mReport;
 import com.example.incidentreport.R;
 import com.example.incidentreport.UserRepositories.UserRepository;
+import com.github.mikephil.charting.utils.Utils;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.tasks.Continuation;
@@ -147,7 +148,17 @@ public class UserPanel_Report extends AppCompatActivity {
 
         saveReport.setOnClickListener(v -> {
             String key = reference.push().getKey();
-            newUploadImage(key);
+            ProgressDialog progressDialog
+                    = new ProgressDialog(this);
+            progressDialog.setTitle("Sending Report...");
+            progressDialog.show();
+            try {
+                newUploadImage(key,progressDialog);
+            }catch (Exception ee)
+            {
+                Toast.makeText(UserPanel_Report.this,"Please add a picture!",Toast.LENGTH_LONG).show();
+                progressDialog.dismiss();
+            }
         });
 
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
@@ -167,17 +178,28 @@ public class UserPanel_Report extends AppCompatActivity {
         String adds = address.getText().toString();
         String contP = contact.getText().toString();
         String contN = number.getText().toString();
-        reference.child("incidents").child(key).setValue(new mReport(Date,key,user.getUid()
-                ,incident,lat,longi,adds,contP,contN
-                ,storagePath,"Pending","")).addOnCompleteListener(new OnCompleteListener<Void>() {
-            @Override
-            public void onComplete(@NonNull Task<Void> task) {
-                if(task.isSuccessful()){
-                    Toast.makeText(UserPanel_Report.this,"Incident has been reported!",Toast.LENGTH_LONG).show();
+        if(!lat.equals(""))
+        {
+            if(adds.contains("Laua-an"))
+            {
+                if(!contN.equals(""))
+                {
+                    reference.child("incidents").child(key).setValue(new mReport(Date,key,user.getUid()
+                            ,incident,lat,longi,adds,contP,contN
+                            ,storagePath,"Pending","")).addOnCompleteListener(task -> {
+                        if(task.isSuccessful()){
+                            Toast.makeText(UserPanel_Report.this,"Incident has been reported!",Toast.LENGTH_LONG).show();
+                        }
+                    });
+                }else {
+                    Toast.makeText(UserPanel_Report.this,"Please add a contact number!",Toast.LENGTH_LONG).show();
                 }
+            }else{
+                Toast.makeText(UserPanel_Report.this,"You are only allowed to report within the Municipality of Laua-an!",Toast.LENGTH_LONG).show();
             }
-        });
-
+        } else {
+            Toast.makeText(UserPanel_Report.this,"Please toggle your location!",Toast.LENGTH_LONG).show();
+        }
     }
 
     private void GetLocation() {
@@ -242,12 +264,7 @@ public class UserPanel_Report extends AppCompatActivity {
 
 
 
-    void newUploadImage(String uid) {
-        ProgressDialog progressDialog
-                = new ProgressDialog(this);
-        progressDialog.setTitle("Sending Report...");
-        progressDialog.show();
-
+    void newUploadImage(String uid,ProgressDialog progressDialog) {
         if (filePath != null) {
             StorageReference ref = storageReference.child("Incidents").child(uid + ".jpg");
             uploadTask = ref.putFile(imageUri);

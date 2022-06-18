@@ -15,10 +15,10 @@
         android:theme="@style/Theme.IncidentReport">
         <activity
             android:name=".UserActivities.UserPanel_NewsActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".AdminActivities.Admin"
-            android:exported="false"
+            android:exported="true"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
 
         <meta-data
@@ -27,23 +27,23 @@
 
         <activity
             android:name=".UserActivities.UserPanel_Profile"
-            android:exported="false"
+            android:exported="true"
             android:label="Edit profile" />
         <activity
             android:name=".UserActivities.UserPanel_File"
-            android:exported="false"
+            android:exported="true"
             android:label="File" />
         <activity
             android:name=".UserActivities.UserPanel_Report"
-            android:exported="false"
+            android:exported="true"
             android:label="Report" />
         <activity
             android:name=".UserActivities.UserPanel_Home"
-            android:exported="false"
+            android:exported="true"
             android:label="Home" />
         <activity
             android:name=".Activities.SignUp"
-            android:exported="false"
+            android:exported="true"
             android:label="Create Account" />
         <activity
             android:name=".Activities.Login"

@@ -41,20 +41,19 @@
                     android:layout_height="match_parent"
                     android:background="@drawable/table_border"
                     android:orientation="vertical">
+
                     <ScrollView
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"
-                        android:scrollbars="none"
-                        >
+                        android:scrollbars="none">
+
                         <TableLayout
+                            android:id="@+id/reportTable"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:id="@+id/reportTable"
-                            android:padding="5dp"
                             android:background="@drawable/table_border"
-                            android:stretchColumns="1,2,3,4,5"
-                            >
-                        </TableLayout>
+                            android:padding="5dp"
+                            android:stretchColumns="1,2,3,4"></TableLayout>
                     </ScrollView>
                 </RelativeLayout>
             </LinearLayout>

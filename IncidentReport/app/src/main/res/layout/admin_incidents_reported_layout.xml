@@ -39,7 +39,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="date Incident"
+            android:text="Incident"
             android:textSize="15dp"
             android:id="@+id/incident"
             android:padding="3dp"
@@ -53,7 +53,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:text="date Incident"
+            android:text="Address"
             android:textSize="15dp"
             android:padding="3dp"
             android:id="@+id/addressIncident"
@@ -62,12 +62,12 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Contact Person"
+            android:text="Remarks"
             />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="date Incident"
+            android:text="Remarks"
             android:textSize="15dp"
             android:padding="3dp"
             android:id="@+id/contactPersonIncident"
@@ -81,7 +81,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="date Incident"
+            android:text="Contact Number"
             android:textSize="15dp"
             android:padding="3dp"
             android:id="@+id/contactNumberIncident"
